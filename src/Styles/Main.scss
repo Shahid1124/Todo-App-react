@@ -1,0 +1,124 @@
+*,::after,::before{margin: 0; padding: 0;}
+html{
+    font-size: 62.5%;
+    line-height: 1.3;
+    box-sizing: border-box;
+}
+.todoContainer{
+    background-color: #171717;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoWrapper {
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    background: #bfbfff;
+    padding: 5rem 2rem;
+    
+}
+.todoBox{
+    // background: #f7f7f7;
+    // border-radius: 12px;
+    // padding: 2.5rem;
+    background-image: linear-gradient(45deg, #dadada, #fff);
+    border-radius: 12px;
+    padding: 2.5rem;
+    background-size: 3px 3px;
+}
+.todo--title{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1b166a;
+    margin-bottom: 3rem;
+    text-align: center;
+
+
+}
+
+.inputDiv {
+    position: relative;
+    margin-bottom: 3rem;
+
+    .inputLabel {
+        display: inline-block;
+        font-size: 1.8rem;
+        padding-left: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #1b166a;
+    }
+
+    &__filed {
+        height: 40px;
+        border-radius: 18px;
+        border: 2px solid #1b166a;
+        background: transparent;
+        width: 100%;
+        padding-right: 9.5rem;
+        box-sizing: border-box;
+        padding-left: 2rem;
+
+        &:focus,
+        &:active{
+            outline: none;
+        }
+    }
+    .addBtn {
+        font-size: 3.5rem;    
+        border-radius: 0 100px 100px 0;
+        line-height: 1;
+        height: 40px;
+        position: absolute;
+        right: -1px;
+        padding: 0 15px;
+        border: 0;
+        width: 80px;
+        background: #1b166a;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover{
+            color:#45ff5b;
+        }
+    }
+}
+.taskList{
+    &__ul{
+        list-style: none;
+        font-size: 1.6rem;
+    }
+    &__li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        border: 1px solid #1b166a;
+        border-radius: 100px;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+}
+.dellBtn {
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    right: 25px;
+    font-weight: bold;
+    line-height: 1;
+    color: #f95656;
+    border: 0;
+    background: transparent;
+
+    &:hover{
+        color: #f80909;
+    }
+}
+.remainingtask {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+}
