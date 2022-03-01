@@ -59,12 +59,29 @@ html{
         border: 2px solid #1b166a;
         background: transparent;
         width: 100%;
-        padding-right: 9.5rem;
+        padding-right: 17.5rem;
         box-sizing: border-box;
         padding-left: 2rem;
 
         &:focus,
         &:active{
+            outline: none;
+        }
+    }
+    .category {
+        position: absolute;
+        right: 79px;
+        bottom: 2px;
+        cursor: pointer;
+        background: #bfbfff;
+        height: 36px;
+        display: flex;
+        border: 0;
+        box-sizing: border-box;
+        padding: 5px;
+        font-size: 12px;
+
+        &:focus{
             outline: none;
         }
     }
@@ -86,26 +103,73 @@ html{
             color:#45ff5b;
         }
     }
+    .submitBtn {
+        font-size: 2rem;
+    }
 }
 .taskList{
     &__ul{
         list-style: none;
         font-size: 1.6rem;
     }
-    &__li {
+    &__li, .Active--task {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
         border: 1px solid #1b166a;
         border-radius: 100px;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         position: relative;
+
+        &--input{
+            position: relative;
+            top: 1px;
+            margin-right: 5px;
+            height: 15px;
+            width: 15px;
+        }
+        &::before{            
+            font-size: 12px;
+            top:-20px;
+            position: absolute;
+        }        
+    }
+    .Active--task{
+        color: green;
+        text-decoration: 2px solid line-through green;
+
+        & .taskDonebtn{
+            color: green;
+        }
     }
 }
-.dellBtn {
+
+.Professional-cat li{
+    background-color: #f9565675;
+}
+.Professional-cat li::before{
+    content: 'Professional';
+}
+.Personal-cat li{
+    background-color: #00800061;
+}
+
+.Personal-cat li::before{
+    content: 'Personal';
+}
+.taskDonebtn {
+    position: relative;
+    left: -10px;
+    font-size: 2rem;
+    border: 0;
+    line-height: 1;
+    background: transparent;
     cursor: pointer;
-    font-size: 3rem;
+}
+.dellBtn, .editBtn {
+    cursor: pointer;
+    font-size: 2rem;
     position: absolute;
     right: 25px;
     font-weight: bold;
@@ -118,7 +182,22 @@ html{
         color: #f80909;
     }
 }
+.editBtn {
+    right: 55px;
+    color: #4944a1;
+
+    &:hover{
+        color: #1b166a;
+    }
+}
+
 .remainingtask {
     font-size: 1.3rem;
     padding: 1rem 2rem;
 }
+
+input:checked + label {
+    text-decoration: line-through;
+  }
+
+  
